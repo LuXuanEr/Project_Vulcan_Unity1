@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    [SerializeField] private float moveSpeed,jumpHigh;
+    [SerializeField] private float moveSpeed,jumpHigh,runSpeed;
     private float xInput;
     
     private int FacingDir = 1;
@@ -54,12 +54,25 @@ public class Player : MonoBehaviour
             Jumpcounter = 1;
         }
 
-       
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            
+            runSpeed = 2;
+        }
+        else
+        {
+            runSpeed = 1;
+        }
+
+
     }
 
     private void Movement()
     {
-        rb.velocity = new Vector2(xInput * moveSpeed, rb.velocity.y );
+       
+        rb.velocity = new Vector2(xInput * moveSpeed* runSpeed, rb.velocity.y );
+        
+        
     }
 
     private void Jump()
@@ -72,6 +85,10 @@ public class Player : MonoBehaviour
     {
         
         bool IsMoving = rb.velocity.x != 0;
+
+        bool IsRunning = rb.velocity.x != 0 && Input.GetKey(KeyCode.LeftShift);
+        
+        anim.SetBool("IsRunning",IsRunning);
         
         anim.SetBool("IsMoving", IsMoving);
         
