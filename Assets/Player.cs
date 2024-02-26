@@ -6,14 +6,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Animator anim;
-    [SerializeField] private float moveSpeed,jumpHigh,runSpeed;
+    private Animator anim; [SerializeField]private float moveSpeed,jumpHigh,runSpeed;
     private float xInput;
     
     private int FacingDir = 1;
     private bool facingRight = true;
     private bool isGrounded;
-    private int Jumpcounter = 0;
+    [SerializeField] private bool SecondJump = false;
+    [SerializeField] private int Jumpcounter = 1;
+    
+    
     
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask whatIsGround;
@@ -22,6 +24,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+
+        Jumpcounter = 1;
     }
 
 
@@ -63,7 +67,8 @@ public class Player : MonoBehaviour
         {
             runSpeed = 1;
         }
-
+        
+       
 
     }
 
@@ -77,12 +82,15 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {   
-        if(isGrounded || Jumpcounter > 0)
+        if(isGrounded || Jumpcounter >= 1)
         rb.velocity = new Vector2(xInput * moveSpeed, jumpHigh );
+        
+        
     }
 
     private void AnimatorController()
     {
+        
         
         bool IsMoving = rb.velocity.x != 0;
 
@@ -92,6 +100,25 @@ public class Player : MonoBehaviour
         
         anim.SetBool("IsMoving", IsMoving);
         
+        anim.SetBool("IsGrounded",isGrounded);
+        
+        anim.SetBool("SecondJump",SecondJump);
+        
+        if (Jumpcounter <= 0)
+        {
+            SecondJump = true;
+
+        }
+        else
+        {
+            SecondJump = false;
+        }
+
+
+       
+
+
+
     }
 
     private void Flip()

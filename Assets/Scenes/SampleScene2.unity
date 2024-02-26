@@ -436,6 +436,8 @@ MonoBehaviour:
   moveSpeed: 3
   jumpHigh: 7
   runSpeed: 0
+  SecondJump: 0
+  Jumpcounter: 0
   groundCheckDistance: 0.8
   whatIsGround:
     serializedVersion: 2
@@ -472,8 +474,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.047492743, y: -0.033923626}
-  m_Size: {x: 1.1920378, y: 1.4206505}
+  m_Offset: {x: -0.03675145, y: -0.033923626}
+  m_Size: {x: 0.4401456, y: 1.4206505}
   m_Direction: 0
 --- !u!1 &1618179937
 GameObject:
