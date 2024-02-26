@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Free-Warrior-Pixel-Art-Sprite-Sheets2_0
+      name: RUN+ATTACK_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 0
-        width: 1800
-        height: 1200
+        width: 191.75
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af8dc1a51e6ec6b4ab31b624fa5400ed
-      internalID: -1187859578
+      spriteID: 7090a52edf927f24290b8ce781294212
+      internalID: -678045100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUN+ATTACK_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 191.75
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1758094e338f0e4697efa2245c5370b
+      internalID: 838005464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUN+ATTACK_2
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 191.75
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5172f252a25d74daacbae707c7464b
+      internalID: 2024051111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUN+ATTACK_3
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 191.75
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87ed1d3c4c24b444a6b73e205779c6c
+      internalID: 1036426731
       vertices: []
       indices: 
       edges: []
@@ -154,7 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Free-Warrior-Pixel-Art-Sprite-Sheets2_0: -1187859578
+      RUN+ATTACK_0: -678045100
+      RUN+ATTACK_1: 838005464
+      RUN+ATTACK_2: 2024051111
+      RUN+ATTACK_3: 1036426731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
